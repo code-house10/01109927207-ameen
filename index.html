@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M6P8M8QR');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5KZK4TJ7');</script>
+<!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة نقل عفش بالونش - نقل آمن وسريع</title>
+    <meta name="description"
+        content="نحن نقدم خدمات نقل الأثاث بالونش بأمان وسرعة. أفضل شركة نقل عفش في مصر مع فك وتركيب وتغليف الأثاث.">
+    <meta name="keywords" content="نقل عفش, نقل أثاث, ونش رفع أثاث, شركة نقل عفش, نقل عفش بالقاهرة">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Arabic Casual Font */
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* Custom styles for the 3D carousel */
+        .carousel-container {
+            position: relative;
+            width: 100%; /* Changed to full width */
+            height: 55vh; /* Adjusted height, removed aspect-ratio */
+        }
+
+        .scene {
+            width: 100%;
+            height: 100%;
+            perspective: 1500px; /* Increased perspective for a more dramatic 3D effect */
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1); /* Smoother transition */
+        }
+
+        .cube__face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            border-radius: 12px; /* Rounded corners for the images */
+            overflow: hidden; /* Ensure content inside face respects border-radius */
+            background: #f0f0f0; /* Fallback background */
+        }
+
+        .cube__face img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure images cover the face without distortion */
+        }
+
+        /* Navigation buttons styling */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            font-size: 1.5rem; /* Larger icon size */
+            cursor: pointer;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .carousel-arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
+        }
+
+        .prev-btn {
+            left: 20px; /* Adjusted position for full-width */
+        }
+
+        .next-btn {
+            right: 20px; /* Adjusted position for full-width */
+        }
+        
+        /* Pagination dots styling */
+        .pagination {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px; /* Increased gap */
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .dot:hover {
+            transform: scale(1.2);
+        }
+
+        .dot.active {
+            background-color: #ffffff;
+            transform: scale(1.2);
+            box-shadow: 0 0 8px rgba(0,0,0,0.5);
+        }
+        
+        /* Discount label style - Updated to a corner ribbon */
+        .discount-label {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        .discount-label span {
+            position: absolute;
+            display: block;
+            width: 225px;
+            padding: 10px 0;
+            background-color: #ef4444; /* red-500 */
+            box-shadow: 0 5px 10px rgba(0,0,0,.1);
+            color: #fff;
+            font: 700 16px/1 'Lato', sans-serif;
+            text-shadow: 0 1px 1px rgba(0,0,0,.2);
+            text-transform: uppercase;
+            text-align: center;
+            left: -45px;
+            top: 40px;
+            transform: rotate(-45deg);
+        }
+
+        /* Animated background shapes */
+        .background-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            list-style: none;
+            display: block;
+            background: rgba(59, 130, 246, 0.15); /* light blue with opacity */
+            animation: float 20s linear infinite;
+        }
+
+        .shape.circle { border-radius: 50%; }
+        .shape.square { border-radius: 0; }
+
+        .shape:nth-child(1) { left: 10%; width: 80px; height: 80px; bottom: -150px; animation-duration: 25s; }
+        .shape:nth-child(2) { left: 20%; width: 30px; height: 30px; bottom: -150px; animation-duration: 12s; }
+        .shape:nth-child(3) { left: 30%; width: 100px; height: 100px; bottom: -150px; animation-duration: 18s; }
+        .shape:nth-child(4) { left: 45%; width: 60px; height: 60px; bottom: -150px; animation-duration: 22s; }
+        .shape:nth-child(5) { left: 65%; width: 20px; height: 20px; bottom: -150px; animation-duration: 15s; }
+        .shape:nth-child(6) { left: 80%; width: 110px; height: 110px; bottom: -150px; animation-duration: 30s; }
+        .shape:nth-child(7) { left: 90%; width: 40px; height: 40px; bottom: -150px; animation-duration: 17s; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Shapes for services section */
+        .service-shape {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.1;
+        }
+        .service-shape.circle {
+            background: #3b82f6; /* blue-500 */
+            border-radius: 50%;
+        }
+        .service-shape.square {
+            background: #ef4444; /* red-500 */
+        }
+        .service-shape.triangle {
+            width: 0;
+            height: 0;
+            background: transparent;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #10b981; /* green-500 */
+        }
+        
+        /* Floating Offer Banner */
+        #offer-banner {
+            transition: transform 0.3s ease-in-out;
+        }
+        #offer-banner.hidden {
+            transform: translateY(100%);
+        }
+        .timer-box {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Call Modal Styles */
+        .modal-overlay {
+            background: rgba(0,0,0,0.7);
+            transition: opacity 0.3s ease;
+        }
+        .modal-container {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateY(-50px) scale(0.95);
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-overlay.active .modal-container {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6P8M8QR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KZK4TJ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+    <!-- Background Shapes Container -->
+    <div class="background-shapes">
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape circle"></div>
+    </div>
+
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/ameen_logowebp" alt="Logo" class="h-12 w-auto">
+                <a href="#" class="text-2xl font-bold text-gray-800 ml-4"></a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="text-gray-600 hover:text-blue-600">الرئيسية</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600">خدماتنا</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600">من نحن</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">اتصل بنا</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3D Cube Carousel -->
+    <section class="py-5">
+        <div class="carousel-container">
+            <div class="scene">
+                <div class="cube">
+                    <div class="cube__face"><img src="images/trucks.webp" alt="Moving Trucks"></div>
+                    <div class="cube__face"><img src="images/movers-carry1.webp" alt="Professional Movers"></div>
+                    <div class="cube__face"><img src="images/packing1.webp" alt="Secure Packing Services"></div>
+                    <div class="cube__face"><img src="images/winch2.webp" alt="Furniture Hoisting Winch"></div>
+                </div>
+            </div>
+            <button class="carousel-arrow prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-arrow next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="pagination">
+                <!-- Dots will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white relative overflow-hidden">
+        <!-- Decorative shapes for this section -->
+        <div class="service-shape circle" style="width: 150px; height: 150px; top: 10%; right: -50px;"></div>
+        <div class="service-shape square" style="width: 80px; height: 80px; bottom: 20%; left: -30px; transform: rotate(45deg);"></div>
+        <div class="service-shape triangle" style="bottom: 5%; right: 5%; transform: rotate(-30deg);"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl font-bold mb-8">خدماتنا المتميزة</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 p-0 rounded-lg shadow-md">
+                    <img src="images/winch2.webp" alt="نقل الأثاث" class="w-full h-53 object-cover rounded-md mb-4">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">نقل الأثاث بالونش</h3>
+                        <p class="pb-[2px]">نستخدم أحدث الأوناش لرفع وتنزيل الأثاث بأمان تام من الطوابق العليا.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-gray-50 p-0 rounded-lg shadow-md">
+                    <img src="images/packing.webp" alt="تغليف الأثاث" class="w-full h-53 object-cover rounded-md mb-4">
+                     <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">تغليف احترافي</h3>
+                        <p class="pb-[2px]">نقدم خدمة تغليف الأثاث بأفضل المواد لحمايته من الخدوش والكسر أثناء النقل.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-gray-50 p-0 rounded-lg shadow-md">
+                    <img src="images/carpenter.webp" alt="فك وتركيب" class="w-full h-53 object-cover rounded-md mb-4">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">فك وتركيب الأثاث</h3>
+                        <p class="pb-[2px]">فنيون متخصصون في فك وتركيب جميع أنواع الأثاث والمطابخ والستائر.</p>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-gray-50 p-0 rounded-lg shadow-md">
+                    <img src="images/packing1.webp" alt="تخزين الأثاث" class="w-full h-53 object-cover rounded-md mb-4">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">خدمات تخزين الأثاث</h3>
+                        <p class="pb-[2px]">نوفر أماكن آمنة ومجهزة لتخزين الأثاث لفترات طويلة أو قصيرة حسب حاجتك.</p>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-gray-50 p-0 rounded-lg shadow-md">
+                    <img src="images/aircondition-maintenance.webp" alt="صيانة التكييف" class="w-full h-53 object-cover rounded-md mb-4">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">فك وتركيب التكييفات</h3>
+                        <p class="pb-[2px]">فنيون متخصصون لفك وإعادة تركيب وصيانة جميع أنواع أجهزة التكييف.</p>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-gray-50 p-0 rounded-lg shadow-md">
+                    <img src="images/movers-carring.webp" alt="خدمات التنظيف" class="w-full h-53 object-cover rounded-md mb-4">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">خدمات التنظيف</h3>
+                        <p class="pb-[2px]">نقدم خدمة تنظيف شاملة للمنازل والمكاتب بعد عملية النقل لنسلمك المكان جاهزًا.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">لماذا تختارنا؟</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="images/movers-carry3.webp" alt="فريق العمل" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <span>
+                                <strong>خبرة طويلة:</strong> سنوات من الخبرة في مجال نقل الأثاث تضمن لك خدمة عالية
+                                الجودة.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <span>
+                                <strong>فريق محترف:</strong> عمالة مدربة على أعلى مستوى للتعامل مع جميع أنواع الأثاث
+                                بحرفية.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <span>
+                                <strong>التزام بالمواعيد:</strong> نحرص على الالتزام التام بالمواعيد المتفق عليها مع
+                                العميل.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <span>
+                                <strong>أسعار تنافسية:</strong> نقدم أفضل الخدمات بأسعار لا تقبل المنافسة في السوق
+                                المصري.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Discounts Section -->
+    <section id="discounts" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">عروض وخصومات خاصة</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Discount Card 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md relative overflow-hidden text-center p-6">
+                    <div class="discount-label"><span>عرض خاص!</span></div>
+                    <img src="images/truck.webp" alt="خصم النقل الأول" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">خصم النقل الأول</h3>
+                    <p>احصل على خصم ٢٥٪ على أول خدمة نقل أثاث معنا. عرض حصري للعملاء الجدد.</p>
+                </div>
+                <!-- Discount Card 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md relative overflow-hidden text-center p-6">
+                     <div class="discount-label"><span>هدية مجانية</span></div>
+                    <img src="images/packing.webp" alt="عرض التغليف" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">عرض التغليف</h3>
+                    <p>نقدم خدمة التغليف مجاناً عند طلب خدمة النقل الشاملة. حماية كاملة لأثاثك.</p>
+                </div>
+                <!-- Discount Card 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md relative overflow-hidden text-center p-6">
+                     <div class="discount-label"><span>وفر أكثر!</span></div>
+                    <img src="images/movers.webp" alt="خصم المجموعات" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">خصم المجموعات</h3>
+                    <p>خصم خاص ٢٠٪ عند طلب خدمات النقل لأكثر من شقة في نفس اليوم. مثالي للجيران والأصدقاء.</p>
+                </div>
+                <!-- Discount Card 4 -->
+                <div class="bg-gray-50 rounded-lg shadow-md relative overflow-hidden text-center p-6">
+                    <div class="discount-label"><span>عرض محدود!</span></div>
+                    <img src="images/carpenter.webp" alt="عرض الفك والتركيب" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-2">عرض الفك والتركيب</h3>
+                    <p>احصل على فك وتركيب غرفة نوم كاملة مجاناً عند حجز خدمة نقل بقيمة تزيد عن ٣٠٠٠ جنيه.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">تواصل معنا الآن</h2>
+            <p class="mb-8">نحن هنا لخدمتك على مدار 24 ساعة. اتصل بنا للحصول على استشارة مجانية.</p>
+            <button class="call-modal-trigger px-8 py-4 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 transition duration-300 text-xl">
+                <i class="fas fa-phone-alt mr-2"></i> اضغط هنا للاتصال
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 شركة نقل العفش لنقل الأثاث. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    
+    <!-- Floating Call Buttons -->
+    <div id="floating-call-buttons" class="fixed left-4 bottom-0 z-40 flex flex-col gap-2 transition-all duration-300" style="bottom: 3px;">
+        <a href="tel:01098282773" class="bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg flex items-center justify-center gap-2 font-bold text-base sm:text-lg hover:bg-green-700 transition-transform transform hover:scale-105">
+            <i class="fas fa-phone-alt"></i>
+            <span>01098282773</span>
+        </a>
+        <a href="tel:01109927202" class="bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg flex items-center justify-center gap-2 font-bold text-base sm:text-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+            <i class="fas fa-phone-alt"></i>
+            <span>01109927202</span>
+        </a>
+    </div>
+
+    <!-- Floating Offer Banner -->
+    <div id="offer-banner" class="fixed bottom-0 left-0 right-0 bg-red-600 text-white p-4 flex items-center justify-center md:justify-between flex-wrap gap-4 z-40">
+        <div class="flex items-center gap-4">
+            <p class="font-bold text-lg">عرض خاص! خصم 30% ينتهي خلال:</p>
+            <div id="countdown-timer" class="flex gap-2 text-center">
+                <div class="timer-box"><span id="hours">00</span><span class="text-xs block">ساعة</span></div>
+                <div class="timer-box"><span id="minutes">00</span><span class="text-xs block">دقيقة</span></div>
+                <div class="timer-box"><span id="seconds">00</span><span class="text-xs block">ثانية</span></div>
+            </div>
+        </div>
+        <button class="call-modal-trigger bg-white text-red-600 font-bold py-2 px-4 rounded-full hover:bg-gray-200">
+            احصل على العرض الآن
+        </button>
+        <button id="close-banner-btn" class="absolute top-1 right-1 text-white text-2xl leading-none">&times;</button>
+    </div>
+
+    <!-- Call Confirmation Modal -->
+    <div id="call-modal-overlay" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none">
+        <div class="modal-container bg-white rounded-lg shadow-xl p-8 max-w-sm w-full text-center relative">
+            <!-- Step 1 -->
+            <div id="modal-step-1">
+                <h3 class="text-xl font-bold mb-4">تأكيد الاتصال</h3>
+                <p class="mb-6">هل أنت جاد ومستعد لطلب خدمة نقل الأثاث الآن؟</p>
+                <div class="flex justify-center gap-4">
+                    <button id="modal-yes-btn" class="bg-green-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-green-600">نعم، أنا جاد</button>
+                    <button class="modal-close-btn bg-gray-300 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-400">لا، ليس الآن</button>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div id="modal-step-2" class="hidden">
+                 <h3 class="text-xl font-bold mb-4">خطوة أخيرة</h3>
+                 <p class="mb-6">رائع! فريقنا في انتظار خدمتك. اضغط على الزر التالي لإظهار الرقم.</p>
+                 <button id="modal-show-number-btn" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 w-full">إظهار رقم الهاتف</button>
+            </div>
+            <!-- Step 3 -->
+            <div id="modal-step-3" class="hidden">
+                <h3 class="text-xl font-bold mb-4">اتصل بنا الآن</h3>
+                <p class="mb-6">اضغط على الرقم للتحدث مباشرة مع أحد ممثلينا.</p>
+                <a href="tel:01098282773" class="flex items-center justify-center gap-4 bg-green-500 text-white text-2xl font-bold p-4 rounded-full hover:bg-green-600 transition-transform transform hover:scale-105">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>01098282773</span>
+                </a>
+            </div>
+             <button class="modal-close-btn absolute top-2 right-3 text-gray-500 text-3xl hover:text-gray-800">&times;</button>
+        </div>
+    </div>
+
+
+    <script>
+        // JavaScript for the 3D Cube Carousel
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select necessary elements from the DOM
+            const cube = document.querySelector('.cube');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const paginationContainer = document.querySelector('.pagination');
+            const scene = document.querySelector('.scene');
+            const faces = document.querySelectorAll('.cube__face');
+            const totalFaces = faces.length;
+            let currentFace = 0;
+            let autoplayInterval;
+
+            // Dynamically create pagination dots based on the number of faces
+            if (paginationContainer) {
+                for (let i = 0; i < totalFaces; i++) {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.dataset.index = i;
+                    paginationContainer.appendChild(dot);
+                }
+            }
+            const dots = document.querySelectorAll('.dot');
+
+            // This function calculates and sets the perspective for the carousel faces
+            function setCarouselPerspective() {
+                if (!scene || !cube || totalFaces === 0) return;
+                const sceneWidth = scene.offsetWidth;
+                // Angle between each face in the polygon
+                const angle = 360 / totalFaces;
+                // The translateZ value positions the faces to form a regular polygon.
+                const translateZ = (sceneWidth / 2) / Math.tan(Math.PI / totalFaces);
+
+                // Position each face of the carousel
+                faces.forEach((face, i) => {
+                    face.style.transform = `rotateY(${i * angle}deg) translateZ(${translateZ}px)`;
+                });
+                
+                // Set the initial position of the carousel without a transition animation
+                rotateCarousel(false);
+            }
+
+            // This function rotates the carousel to the current face
+            function rotateCarousel(withTransition = true) {
+                if (!cube || !scene || totalFaces === 0) return;
+                if (!withTransition) {
+                    cube.style.transition = 'none';
+                } else {
+                    cube.style.transition = 'transform 1s cubic-bezier(0.77, 0, 0.175, 1)';
+                }
+                const sceneWidth = scene.offsetWidth;
+                const translateZ = (sceneWidth / 2) / Math.tan(Math.PI / totalFaces);
+                // Calculate the rotation angle for the entire carousel
+                const angle = (currentFace * -360) / totalFaces;
+                // Apply the rotation and move the carousel back to keep it centered
+                cube.style.transform = `translateZ(-${translateZ}px) rotateY(${angle}deg)`;
+                
+                updatePagination();
+            }
+
+            // This function updates which pagination dot is highlighted
+            function updatePagination() {
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentFace);
+                });
+            }
+            
+            // Autoplay functions
+            function startAutoplay() {
+                 // Clear any existing interval to prevent multiple intervals running
+                clearInterval(autoplayInterval);
+                autoplayInterval = setInterval(() => {
+                    currentFace = (currentFace + 1) % totalFaces;
+                    rotateCarousel();
+                }, 2000); // 2-second interval
+            }
+
+            function stopAndRestartAutoplay() {
+                clearInterval(autoplayInterval);
+                // Restart autoplay after a 5-second delay of inactivity
+                setTimeout(startAutoplay, 5000);
+            }
+
+            // Event listener for the "next" button
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentFace = (currentFace + 1) % totalFaces;
+                    rotateCarousel();
+                    stopAndRestartAutoplay();
+                });
+            }
+
+            // Event listener for the "previous" button
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    currentFace = (currentFace - 1 + totalFaces) % totalFaces;
+                    rotateCarousel();
+                    stopAndRestartAutoplay();
+                });
+            }
+
+            // Event listener for the pagination dots container
+            if (paginationContainer) {
+                paginationContainer.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('dot')) {
+                        currentFace = parseInt(e.target.dataset.index);
+                        rotateCarousel();
+                        stopAndRestartAutoplay();
+                    }
+                });
+            }
+
+            // Initial setup
+            if(totalFaces > 0) {
+                setCarouselPerspective();
+                startAutoplay(); // Start autoplay on page load
+            }
+            // Recalculate perspective on window resize
+            window.addEventListener('resize', setCarouselPerspective);
+            
+            // --- Floating Call Buttons & Offer Banner Logic ---
+            const floatingCallButtons = document.getElementById('floating-call-buttons');
+            const offerBanner = document.getElementById('offer-banner');
+            const closeBannerBtn = document.getElementById('close-banner-btn');
+            
+            // Countdown Timer
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            function updateCallButtonPosition() {
+                if (!floatingCallButtons || !offerBanner) return; // Guard clause
+                
+                if (offerBanner.classList.contains('hidden')) {
+                    floatingCallButtons.style.bottom = '16px'; // 1rem padding from bottom
+                } else {
+                    const bannerHeight = offerBanner.offsetHeight;
+                    floatingCallButtons.style.bottom = (bannerHeight + 3) + 'px';
+                }
+            }
+
+            // Initial position update
+            // Use setTimeout to ensure banner height is calculated correctly after render
+            setTimeout(updateCallButtonPosition, 100);
+            
+            // Update on window resize
+            window.addEventListener('resize', updateCallButtonPosition);
+            
+            const countdownDuration = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+            const countdownEndDate = new Date().getTime() + countdownDuration;
+
+            if (hoursEl && minutesEl && secondsEl) {
+                const timerInterval = setInterval(() => {
+                    const now = new Date().getTime();
+                    const distance = countdownEndDate - now;
+
+                    if (distance < 0) {
+                        clearInterval(timerInterval);
+                        if (offerBanner) {
+                            offerBanner.classList.add('hidden');
+                            updateCallButtonPosition(); // Update buttons when timer hides banner
+                        }
+                        return;
+                    }
+
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    hoursEl.textContent = hours.toString().padStart(2, '0');
+                    minutesEl.textContent = minutes.toString().padStart(2, '0');
+                    secondsEl.textContent = seconds.toString().padStart(2, '0');
+
+                }, 1000);
+            }
+
+            if (closeBannerBtn) {
+                closeBannerBtn.addEventListener('click', () => {
+                    if (offerBanner) {
+                        offerBanner.classList.add('hidden');
+                        updateCallButtonPosition(); // Update buttons when banner is closed manually
+                    }
+                });
+            }
+            
+            // --- Call Modal Logic ---
+            const callModalOverlay = document.getElementById('call-modal-overlay');
+            const openCallModalBtns = document.querySelectorAll('.call-modal-trigger');
+            const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
+            
+            const modalStep1 = document.getElementById('modal-step-1');
+            const modalStep2 = document.getElementById('modal-step-2');
+            const modalStep3 = document.getElementById('modal-step-3');
+
+            const modalYesBtn = document.getElementById('modal-yes-btn');
+            const modalShowNumberBtn = document.getElementById('modal-show-number-btn');
+
+            function openModal() {
+                // Reset to step 1 every time
+                if (modalStep1) modalStep1.classList.remove('hidden');
+                if (modalStep2) modalStep2.classList.add('hidden');
+                if (modalStep3) modalStep3.classList.add('hidden');
+                if (callModalOverlay) callModalOverlay.classList.add('active');
+            }
+
+            function closeModal() {
+                if (callModalOverlay) callModalOverlay.classList.remove('active');
+            }
+
+            openCallModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+            modalCloseBtns.forEach(btn => btn.addEventListener('click', closeModal));
+            
+            if (callModalOverlay) {
+                callModalOverlay.addEventListener('click', (e) => {
+                    if (e.target === callModalOverlay) {
+                        closeModal();
+                    }
+                });
+            }
+
+            if (modalYesBtn) {
+                modalYesBtn.addEventListener('click', () => {
+                    if (modalStep1) modalStep1.classList.add('hidden');
+                    if (modalStep2) modalStep2.classList.remove('hidden');
+                });
+            }
+            
+            if (modalShowNumberBtn) {
+                modalShowNumberBtn.addEventListener('click', () => {
+                    if (modalStep2) modalStep2.classList.add('hidden');
+                    if (modalStep3) modalStep3.classList.remove('hidden');
+                });
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
+
